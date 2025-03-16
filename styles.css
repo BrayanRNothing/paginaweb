@@ -1,0 +1,81 @@
+/* Reseteo de estilos para asegurar consistencia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #a69cb8, #360f91);
+  background-color: black;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #332d8d;
+}
+
+/* Estilos para las secciones */
+.content {
+  margin-top: 60px; /* Espacio para la barra de navegación */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 20px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
